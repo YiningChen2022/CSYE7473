@@ -3,6 +3,7 @@ public class Driver {
 
     public static void main(String[] args){
         //init stocks
+
         Tradable stock1 = new IBM("IBM", 131.15, "IBM Common Stock");
         Tradable stock2 = new Google("Google", 50, "Google Stock");
 
@@ -13,6 +14,8 @@ public class Driver {
         stock2.setBid(20);
         stock2.setBid(30);
         System.out.println(stock2.getMetric());
+
+        //1. implementation of two different algo to calculate the performance matrix
 
     }
 }
