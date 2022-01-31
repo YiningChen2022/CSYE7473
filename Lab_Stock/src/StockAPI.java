@@ -58,7 +58,7 @@ public class StockAPI implements Tradable {
     }
 
 
-     public int getMetric() {
+     public double getMetric() {
         return 0;
     }
 }
