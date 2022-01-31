@@ -1,31 +1,25 @@
 public class Driver {
 
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //init stocks
 
         Tradable stock1 = new IBM("IBM", 131.15, "IBM Common Stock");
         Tradable stock2 = new Google("Google", 50, "Google Stock");
+        double[] iBMBid = new double[]{130.22,139.01,131.99,112.19,113.59};
+        double[] googleBid = new double[]{33.22,39.01,51.99,23.19,49.59};
 
-        stock1.setBid(131.22);
-        stock1.setBid(132.01);
-        stock1.setBid(131.00);
-        stock1.setBid(130.99);
-        stock1.setBid(130.19);
-        stock1.setBid(130.59);
-        System.out.println("Performace matric of IBM");
-        System.out.println(stock1.getMetric());
 
-        stock2.setBid(49);
-        stock2.setBid(51.01);
-        stock2.setBid(50.11);
-        stock2.setBid(52.01);
-        stock2.setBid(51.99);
-        stock2.setBid(51.22);
-        System.out.println("Performace matric of Google");
-        System.out.println(stock2.getMetric());
+        simulate(stock1, iBMBid);
+        simulate(stock2, googleBid);
 
-        //1. implementation of two different algo to calculate the performance matrix
+    }
 
+    private static void simulate(Tradable stock, double[] bids) {
+        System.out.println(stock);
+        for (int i = 0; i < bids.length; i++) {
+            stock.setBid(bids[i]);
+            System.out.println("After bid: " + bids[i] + ", get metric: " + stock.getMetric());
+        }
     }
 }

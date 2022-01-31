@@ -11,19 +11,13 @@ public class IBM extends StockAPI {
 
 
     @Override
-    public double getMetric() {
-
-        double orginal = bits.get(0);
-        double diff = 0;
-        for (int i = 0; i < bits.size() - 1; i++) {
-            //calculate the bits difference
-            //Divide the gain or loss by the original price of the investment
-            diff += (bits.get(i + 1) - bits.get(i)) / bits.get(i);
-
+    public int getMetric() {
+        int count = bits.size();
+        double sum = 0;
+        for (double n : bits) {
+            sum += n;
         }
-        //find the avg difference
-        return diff / bits.size();
-
+        return (int) (sum / count - this.getPrice());
 
     }
 
@@ -31,6 +25,6 @@ public class IBM extends StockAPI {
     public void setBid(double bid) {
         setPrice(bid);
         bits.add(bid);
-        //System.out.println(bits);
+
     }
 }
