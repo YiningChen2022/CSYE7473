@@ -10,9 +10,6 @@ public class Driver {
         double[] googleBid = new double[]{33.22,39.01,51.99,23.19,49.59};
 
 
-
-
-        //1. implementation of two different algo to calculate the performance matrix
         simulate(stock1, iBMBid);
         simulate(stock2, googleBid);
 

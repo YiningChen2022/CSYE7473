@@ -18,7 +18,7 @@ public class Google extends StockAPI {
             diff += bits.get(i + 1) - bits.get(i);
         }
         //Divide the gain or loss by the original price of the investment
-        return (int)( diff);
+        return (int) (diff);
 
 
     }
