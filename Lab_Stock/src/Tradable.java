@@ -17,6 +17,6 @@ public interface Tradable {
      */
 
 
-    double getMetric();
+    int getMetric();
 
 }
