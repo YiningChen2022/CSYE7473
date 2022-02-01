@@ -47,7 +47,7 @@ public class StockAPI implements Tradable {
         return "Stock{" +
                 "ID='" + ID + '\'' +
                 ", price=" + price +
-                ", description='" + description + '\'' +
+                ", description='" + description + '\'' + ", current Metic: " + getMetric() + "\'" +
                 '}';
     }
 

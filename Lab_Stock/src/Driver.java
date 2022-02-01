@@ -19,7 +19,7 @@ public class Driver {
         System.out.println(stock);
         for (int i = 0; i < bids.length; i++) {
             stock.setBid(bids[i]);
-            System.out.println("After bid: " + bids[i] + ", get metric: " + stock.getMetric());
+            System.out.println("After bid: " + bids[i] + " " + stock.toString());
         }
     }
 }
